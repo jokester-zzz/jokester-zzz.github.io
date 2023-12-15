@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yangxm.github.io/sitemap.xml
+Sitemap: https://jokester-zzz.github.io/sitemap.xml
