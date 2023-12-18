@@ -6,7 +6,7 @@
     - name: Institution
       value: Shanghai Artificial Intelligence Laboratory
     - name: Languages
-      value: English, German
+      value: Chinese, English 
 
 - title: Education
   type: time_table
@@ -34,9 +34,10 @@
       institution: Shanghai Artificial Intelligence Laboratory
       year: 2022 - now
       description:
+        - 3D offboard object detection.
         - Autonomous Driving.
-        - 3D Vision.
-        - Scene Understanding.
+      #   - 3D Vision.
+      #   - Scene Understanding.
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
