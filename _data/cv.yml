@@ -33,25 +33,23 @@
     - title: Researcher
       institution: Shanghai Artificial Intelligence Laboratory
       year: 2022 - now
-      description:
-        - 3D offboard object detection.
-        - Autonomous Driving.
-      #   - 3D Vision.
+      # description:
+      #   - 3D Object Detection.
+      #   - Autonomous Driving.
       #   - Scene Understanding.
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
         #     - Sub-description 2.
-    # - title: Visiting Professor
-    #   institution: California Institute of Technology, Pasadena, California, US
-    #   year: 1933
-    #   description:
-    #     - Description 1.
-    #     - Description 2.
+
 
 - title: Open Source Projects
   type: time_table
   contents:
+    - title: <a href="https://github.com/PJLab-ADG/GPT4V-AD-Exploration">On the Road with GPT-4V</a>
+      year: 2023
+      description: Early Explorations of Visual-language Model on Autonomous Driving.
+
     - title: <a href="https://github.com/PJLab-ADG/DetZero">DetZero</a>
       year: 2023
       description: An Offboard 3D Object Detector for LiDAR Point Clouds.
@@ -79,9 +77,10 @@
   contents:
     - title:
       items: 
-        - Autonomous Driving
         - 3D Vision
+        - Knowledge-driven Autonomous Driving
         - Scene Understanding
+        - Closed-loop Simulation
     # - title: Topic 2.
     #   items:
     #     - Description 1.
