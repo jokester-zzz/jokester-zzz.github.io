@@ -46,6 +46,14 @@
 - title: Open Source Projects
   type: time_table
   contents:
+    - title: <a href="https://github.com/PJLab-ADG/DriveArena">DriveArena</a>
+      year: 2024
+      description: A Closed-loop Generative Simulation Platform for Autonomous Driving.
+
+    - title: <a href="https://github.com/PJLab-ADG/LeapAD">LeapAD</a>
+      year: 2024
+      description: A Dual-Process Approach to Autonomous Driving.
+
     - title: <a href="https://github.com/PJLab-ADG/GPT4V-AD-Exploration">On the Road with GPT-4V</a>
       year: 2023
       description: Early Explorations of Visual-language Model on Autonomous Driving.

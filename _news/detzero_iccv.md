@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-DetZero is accepted by ICCV 2023.
+🥳 [DetZero](https://github.com/PJLab-ADG/DetZero) is accepted to ICCV 2023.
