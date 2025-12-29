@@ -21,12 +21,6 @@ social: true  # includes social icons at the bottom of the page
 
 I am currently a young researcher in [ADLab](https://pjlab-adg.github.io/) at [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/). I earned my Master's degree from [Zhejiang University](https://www.zju.edu.cn/english/) in 2022, where I was a member of the [APRIL Lab](https://april.zju.edu.cn/) under the mentorship of Dr. [Yong Liu](https://person.zju.edu.cn/yongliu). Prior to this, I completed my bachelor’s degree at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/).
 
-My research interests focus on **knowledge-driven autonomous driving**. Recently, I have been exploring the application of multi-modal large models and generative models in the field of autonomous driving.
+My current research focuses on AI agent frameworks. Specifically, I am interested in intelligent agents for industrial software operation, tool utilization, and continuous learning mechanisms. My core objective is to drive Agent technology from theoretical models to solving complex real-world problems. Prior to this, my research focused on autonomous driving.
 
 Feel free to drop me emails (**yangxuemeng@pjlab.org.cn**) if you have similar interests on above topics.
-
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->

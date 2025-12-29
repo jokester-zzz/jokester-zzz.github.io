@@ -46,6 +46,10 @@
 - title: Open Source Projects
   type: time_table
   contents:
+    - title: <a href="https://github.com/KnowledgeXLab/MUSE">MUSE</a>
+      year: 2025
+      description: A system that can continuously evolve in real-world, long-term, and cross-application tasks, establishing a new paradigm of "learning by doing."
+
     - title: <a href="https://github.com/PJLab-ADG/DriveArena">DriveArena</a>
       year: 2024
       description: A Closed-loop Generative Simulation Platform for Autonomous Driving.
@@ -83,7 +87,13 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title:
+    - title: AI Agents
+      items: 
+        - Continuous Learning Agents
+        - Tool Augmented Agents
+        - GUI Agents
+
+    - title: Autonomous Driving
       items: 
         - 3D Vision
         - Knowledge-driven Autonomous Driving

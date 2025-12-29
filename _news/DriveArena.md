@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-08-02
+date: 2025-06-26
 inline: true
 related_posts: false
 ---
 
-We released a closed-loop generative AD simulation platform called [DriveArena](https://github.com/PJLab-ADG/DriveArena).
+🥳 [DriveArena](https://github.com/PJLab-ADG/DriveArena) is accepted to ICCV 2025. 
