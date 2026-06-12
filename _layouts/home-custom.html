@@ -31,7 +31,7 @@
       <h1 class="hc-hero__name">{{ site.first_name }}<br>{{ site.last_name }}</h1>
       <div class="hc-hero__desc">{{ content }}</div>
       <div class="hc-hero__links">
-        <a href="https://scholar.google.com/citations?user=xGuZsikAAAAJ" class="hc-hero__link" target="_blank" rel="noopener">
+        <a href="https://scholar.google.com/citations?user={{ site.semanticscholar_id | split: '&' | first }}" class="hc-hero__link" target="_blank" rel="noopener">
           <span class="hc-hero__link-dot"></span>Scholar
         </a>
         {% if site.github_username %}
@@ -56,7 +56,7 @@
       {% endif %}
       <div class="hc-hero__right-name">{{ site.first_name }} {{ site.last_name }} · 杨雪梦</div>
       <div class="hc-social-pills">
-        <a href="https://scholar.google.com/citations?user=xGuZsikAAAAJ" class="hc-pill" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://scholar.google.com/citations?user={{ site.semanticscholar_id | split: '&' | first }}" class="hc-pill" target="_blank" rel="noopener">Scholar</a>
         {% if site.github_username %}
         <a href="https://github.com/{{ site.github_username }}" class="hc-pill" target="_blank" rel="noopener">GitHub</a>
         {% endif %}
@@ -88,7 +88,7 @@
 
   <!-- Selected Publications -->
   <div class="hc-pubs-header" id="publications">
-    <div class="hc-label">Selected Publications</div>
+    <h2 class="hc-label">Selected Publications</h2>
   </div>
   <div class="hc-pubs-grid">
 
