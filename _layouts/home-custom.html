@@ -1,0 +1,161 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include metadata.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/home-custom.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="hc-nav">
+    <a href="{{ '/' | relative_url }}" class="hc-nav__logo">
+      {{ site.first_name }} {{ site.last_name }}
+    </a>
+    <ul class="hc-nav__links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="{{ '/cv' | relative_url }}">CV</a></li>
+      <li><a href="mailto:{{ site.email }}">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hc-hero">
+    <div class="hc-hero__left">
+      <div class="hc-eyebrow">
+        <div class="hc-eyebrow__line"></div>
+        <span class="hc-eyebrow__text">Shanghai AI Lab · ADLab</span>
+      </div>
+      <h1 class="hc-hero__name">{{ site.first_name }}<br>{{ site.last_name }}</h1>
+      <div class="hc-hero__desc">{{ content }}</div>
+      <div class="hc-hero__links">
+        <a href="https://scholar.google.com/citations?user=xGuZsikAAAAJ" class="hc-hero__link" target="_blank" rel="noopener">
+          <span class="hc-hero__link-dot"></span>Scholar
+        </a>
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" class="hc-hero__link" target="_blank" rel="noopener">
+          <span class="hc-hero__link-dot"></span>GitHub
+        </a>
+        {% endif %}
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}" class="hc-hero__link">
+          <span class="hc-hero__link-dot"></span>Email
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="hc-hero__right">
+      {% if page.profile.image %}
+      <img
+        class="hc-avatar"
+        src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
+        alt="{{ site.first_name }} {{ site.last_name }}"
+      >
+      {% endif %}
+      <div class="hc-hero__right-name">{{ site.first_name }} {{ site.last_name }} · 杨雪梦</div>
+      <div class="hc-social-pills">
+        <a href="https://scholar.google.com/citations?user=xGuZsikAAAAJ" class="hc-pill" target="_blank" rel="noopener">Scholar</a>
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" class="hc-pill" target="_blank" rel="noopener">GitHub</a>
+        {% endif %}
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}" class="hc-pill">Email</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Focus -->
+  <section class="hc-section" id="research">
+    <div class="hc-label">Research Focus</div>
+    <h2 class="hc-section__title">Building agents that learn, act, and evolve in the real world.</h2>
+    <p class="hc-section__body">
+      My work spans AI agent frameworks for industrial software automation, agentic search and retrieval,
+      and self-evolving agent mechanisms. Previously, I worked on autonomous driving —
+      3D scene understanding, closed-loop simulation, and cognitive driving agents.
+    </p>
+    <div class="hc-tags">
+      <span class="hc-tag">LLM Agent Frameworks</span>
+      <span class="hc-tag">Tool Use</span>
+      <span class="hc-tag">Industrial Software AI</span>
+      <span class="hc-tag">Continuous Learning</span>
+      <span class="hc-tag">Agentic Search</span>
+      <span class="hc-tag">Autonomous Driving</span>
+    </div>
+  </section>
+
+  <!-- Selected Publications -->
+  <div class="hc-pubs-header" id="publications">
+    <div class="hc-label">Selected Publications</div>
+  </div>
+  <div class="hc-pubs-grid">
+
+    <div class="hc-paper">
+      <span class="hc-paper__venue">ICCV 2025</span>
+      <p class="hc-paper__title">DriveArena: A Closed-Loop Generative Simulation Platform for Autonomous Driving</p>
+      <p class="hc-paper__authors">Yang X*, Wen L*, Wei T*, et al.</p>
+      <a href="https://arxiv.org/pdf/2408.00415" class="hc-paper__link" target="_blank" rel="noopener">arXiv →</a>
+    </div>
+
+    <div class="hc-paper">
+      <span class="hc-paper__venue">ACL 2026</span>
+      <p class="hc-paper__title">The Agent's First Day: Benchmarking Learning &amp; Scheduling in Workplace Scenarios</p>
+      <p class="hc-paper__authors">Fu D*, Mei J*, Wu R*, Yang X*, et al.</p>
+      <a href="https://arxiv.org/pdf/2601.08173" class="hc-paper__link" target="_blank" rel="noopener">arXiv →</a>
+    </div>
+
+    <div class="hc-paper">
+      <span class="hc-paper__venue">TMLR 2026</span>
+      <p class="hc-paper__title">O²-Searcher: A Searching-based Agent for Open-domain Open-ended Question Answering</p>
+      <p class="hc-paper__authors">Mei J, Hu T, Fu D, Wen L, Yang X, et al.</p>
+      <a href="https://arxiv.org/pdf/2505.16582" class="hc-paper__link" target="_blank" rel="noopener">arXiv →</a>
+    </div>
+
+    <div class="hc-paper">
+      <span class="hc-paper__venue">ACL 2026</span>
+      <p class="hc-paper__title">Learning on the Job: An Experience-driven Self-evolving Agent for Long-horizon Tasks (MUSE)</p>
+      <p class="hc-paper__authors">Yang C*, Yang X*, Wen L*, et al.</p>
+      <a href="https://arxiv.org/pdf/2510.08002" class="hc-paper__link" target="_blank" rel="noopener">arXiv →</a>
+    </div>
+
+    <div class="hc-paper">
+      <span class="hc-paper__venue">ICML 2025</span>
+      <p class="hc-paper__title">EvolveR: Closed-loop Experience-driven Self-evolving Agent Architecture</p>
+      <p class="hc-paper__authors">Mei J, ..., Yang X, et al.</p>
+      <a href="https://arxiv.org/pdf/2510.16079" class="hc-paper__link" target="_blank" rel="noopener">arXiv →</a>
+    </div>
+
+    <div class="hc-paper">
+      <span class="hc-paper__venue">NeurIPS 2024</span>
+      <p class="hc-paper__title">LeapAD: Continuously Learning, Adapting, and Improving Autonomous Driving</p>
+      <p class="hc-paper__authors">Mei J, Ma Y, Yang X, et al.</p>
+      <a href="https://arxiv.org/pdf/2405.15324" class="hc-paper__link" target="_blank" rel="noopener">arXiv →</a>
+    </div>
+
+  </div>
+
+  <!-- Recent News -->
+  <section class="hc-section" id="news">
+    <div class="hc-label">Recent News</div>
+    <div class="hc-news-list">
+      {% assign news_sorted = site.news | sort: "date" | reverse %}
+      {% for item in news_sorted limit: 5 %}
+      <div class="hc-news-item">
+        <span class="hc-news__date">{{ item.date | date: "%b %Y" }}</span>
+        <div class="hc-news__text">{{ item.content }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="hc-footer">
+    <span class="hc-footer__name">{{ site.first_name }} {{ site.last_name }} · 杨雪梦</span>
+    <a href="mailto:{{ site.email }}" class="hc-footer__email">{{ site.email }}</a>
+  </footer>
+
+  {% include scripts/analytics.html %}
+</body>
+</html>
