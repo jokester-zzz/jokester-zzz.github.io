@@ -190,7 +190,7 @@ a { color: inherit; text-decoration: none; }
   transition: background 0.15s, color 0.15s;
 }
 
-.hc-pill:hover { background: var(--accent); color: #fff; }
+.hc-pill:hover { background: var(--accent); color: var(--bg); }
 
 /* ── Sections ── */
 .hc-section {
