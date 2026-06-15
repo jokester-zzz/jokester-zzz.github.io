@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am currently a young researcher in [ADLab](https://pjlab-adg.github.io/) at [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/). I earned my Master's degree from [Zhejiang University](https://www.zju.edu.cn/english/) in 2022, where I was a member of the [APRIL Lab](https://april.zju.edu.cn/) under the mentorship of Dr. [Yong Liu](https://person.zju.edu.cn/yongliu). Prior to this, I completed my bachelor’s degree at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/).
+I am currently a young researcher in [KnowledgeXLab](https://KnowledgeXLab.github.io/) at [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/). I earned my Master's degree from [Zhejiang University](https://www.zju.edu.cn/english/) in 2022, where I was a member of the [APRIL Lab](https://april.zju.edu.cn/) under the mentorship of Dr. [Yong Liu](https://person.zju.edu.cn/yongliu). Prior to this, I completed my bachelor’s degree at [Northwestern Polytechnical University](https://en.nwpu.edu.cn/).
 
 My current research focuses on AI agent frameworks. Specifically, I am interested in intelligent agents for industrial software operation, tool utilization, and continuous learning mechanisms. My core objective is to drive Agent technology from theoretical models to solving complex real-world problems. Prior to this, my research focused on autonomous driving.
 

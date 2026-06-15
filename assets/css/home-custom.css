@@ -21,6 +21,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.6;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -64,7 +66,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Hero ── */
 .hc-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   min-height: 92vh;
   border-bottom: 1px solid var(--border);
 }
@@ -113,11 +115,21 @@ a { color: inherit; text-decoration: none; }
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.85;
-  max-width: 380px;
+  max-width: 520px;
   margin-bottom: 40px;
 }
 
-.hc-hero__desc p { margin: 0; }
+.hc-hero__desc p { margin: 0 0 1em; }
+
+.hc-hero__desc a {
+  color: var(--accent-dark) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.hc-hero__desc a:hover {
+  color: var(--text-primary) !important;
+}
 
 .hc-hero__links {
   display: flex;
@@ -157,12 +169,34 @@ a { color: inherit; text-decoration: none; }
   padding: 64px 48px;
 }
 
+.hc-avatar-wrap {
+  position: relative;
+  width: 200px;
+  height: 270px;
+  flex-shrink: 0;
+}
+
 .hc-avatar {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
   object-fit: cover;
   border: 3px solid var(--accent);
+  transition: opacity 0.3s ease;
+}
+
+.hc-avatar--chibi {
+  opacity: 0;
+}
+
+.hc-avatar-wrap:hover .hc-avatar--default {
+  opacity: 0;
+}
+
+.hc-avatar-wrap:hover .hc-avatar--chibi {
+  opacity: 1;
 }
 
 .hc-hero__right-name {
@@ -171,6 +205,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--text-subtle);
   text-align: center;
+  white-space: nowrap;
 }
 
 .hc-social-pills {

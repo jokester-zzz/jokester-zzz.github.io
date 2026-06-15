@@ -1,0 +1,209 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include metadata.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home-custom.css' | relative_url }}">
+  <style>
+    img { max-width: 100%; height: auto; }
+    :root { --global-theme-color: #9a7a5a; }
+    .publications .abbr abbr { color: #f5f0e8; }
+    .pubs-page {
+      padding: 64px 64px 80px;
+    }
+    .pubs-year-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .pubs-year-btn {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+    }
+    .pubs-year-btn:hover, .pubs-year-btn.active {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+    .pubs-year-section { display: block; }
+    .pubs-tag-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .pubs-tag-btn {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border: 1px solid var(--accent-dark);
+      border-radius: 20px;
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+    }
+    .pubs-tag-btn:hover, .pubs-tag-btn.active {
+      background: var(--accent-dark);
+      color: var(--bg);
+      border-color: var(--accent-dark);
+    }
+    .pubs-page h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .pubs-page .pubs-desc {
+      font-size: 14px;
+      color: var(--text-subtle);
+      margin-bottom: 48px;
+    }
+    .pubs-page h2.year {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin: 40px 0 20px;
+    }
+    .pubs-page .publications ol {
+      list-style: none;
+      padding: 0;
+    }
+    .pubs-page .publications li {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pubs-page .publications .title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .pubs-page .publications .author {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .pubs-page .publications .periodical {
+      font-size: 13px;
+      color: var(--text-subtle);
+      margin-bottom: 12px;
+    }
+    .pubs-page .publications .links {
+      margin-top: 4px;
+    }
+    .pubs-page .publications .links a {
+      font-size: 12px;
+      color: var(--accent-dark);
+      margin-right: 12px;
+      border-bottom: 1px solid var(--accent);
+    }
+    .pubs-page .publications .links a:hover {
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="hc-nav">
+    <a href="{{ '/' | relative_url }}" class="hc-nav__logo">
+      {{ site.first_name }} {{ site.last_name }}
+    </a>
+    <ul class="hc-nav__links">
+      <li><a href="{{ '/' | relative_url }}#research">About</a></li>
+      <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+      <li><a href="{{ '/assets/pdf/resume.pdf' | relative_url }}" target="_blank">CV</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="pubs-page">
+    <h1>{{ page.title }}</h1>
+    <p class="pubs-desc">{{ page.description }}</p>
+    <div class="pubs-tag-nav">
+      <button class="pubs-tag-btn active" data-tag="all">All Topics</button>
+      <button class="pubs-tag-btn" data-tag="Agent Frameworks">Agent Frameworks</button>
+      <button class="pubs-tag-btn" data-tag="Continuous Learning">Continuous Learning</button>
+      <button class="pubs-tag-btn" data-tag="Industrial Software AI">Industrial Software AI</button>
+      <button class="pubs-tag-btn" data-tag="World Modeling">World Modeling</button>
+      <button class="pubs-tag-btn" data-tag="Autonomous Driving">Autonomous Driving</button>
+    </div>
+    {% if page.years %}
+    <div class="pubs-year-nav">
+      <button class="pubs-year-btn active" data-year="all">All Years</button>
+      {% for y in page.years %}
+        {% unless page.ignore_years_published contains y %}
+        <button class="pubs-year-btn" data-year="{{ y }}">{{ y }}</button>
+        {% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    {{ content }}
+  </div>
+
+  <!-- Footer -->
+  <footer class="hc-footer">
+    <span class="hc-footer__name">{{ site.first_name }} {{ site.last_name }} · 杨雪梦</span>
+    <a href="mailto:{{ site.email }}" class="hc-footer__email">{{ site.email }}</a>
+  </footer>
+
+  {% include scripts/jquery.html %}
+  {% include scripts/bootstrap.html %}
+  {% include scripts/misc.html %}
+  {% include scripts/badges.html %}
+  {% include scripts/analytics.html %}
+  <script>
+    (function () {
+      var activeYear = 'all';
+      var activeTag  = 'all';
+
+      function applyFilters() {
+        var sections = document.querySelectorAll('.pubs-year-section');
+        sections.forEach(function (sec) {
+          var yearMatch = (activeYear === 'all' || sec.getAttribute('data-year') === activeYear);
+          var items = sec.querySelectorAll('ol.bibliography > li');
+          var visibleCount = 0;
+          items.forEach(function (li) {
+            var kwSpan = li.querySelector('.pub-keywords');
+            var kws = kwSpan ? kwSpan.getAttribute('data-keywords') : '';
+            var tagMatch = (activeTag === 'all' || kws.indexOf(activeTag) !== -1);
+            var show = yearMatch && tagMatch;
+            li.style.display = show ? '' : 'none';
+            if (show) visibleCount++;
+          });
+          sec.style.display = (yearMatch && visibleCount > 0) ? '' : 'none';
+        });
+      }
+
+      document.querySelectorAll('.pubs-year-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.pubs-year-btn').forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          activeYear = btn.getAttribute('data-year');
+          applyFilters();
+        });
+      });
+
+      document.querySelectorAll('.pubs-tag-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.pubs-tag-btn').forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          activeTag = btn.getAttribute('data-tag');
+          applyFilters();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
