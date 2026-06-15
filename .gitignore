@@ -1,7 +1,9 @@
 _site
+.site-local
 .bundle
 .sass-cache
 .jekyll-cache
+.jekyll-cache-user
 .jekyll-metadata
 .DS_store
 .ruby-version
@@ -10,3 +12,4 @@ Gemfile.lock
 vendor
 
 .superpowers/
+docs/
