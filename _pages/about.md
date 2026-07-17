@@ -23,4 +23,4 @@ I am currently a young researcher in [KnowledgeXLab](https://KnowledgeXLab.githu
 
 My current research focuses on AI agent frameworks. Specifically, I am interested in intelligent agents for industrial software operation, tool utilization, and continuous learning mechanisms. My core objective is to drive Agent technology from theoretical models to solving complex real-world problems. Prior to this, my research focused on autonomous driving.
 
-Feel free to drop me emails (**yangxuemeng@pjlab.org.cn**) if you have similar interests on above topics.
+Feel free to drop me emails (**xuemengyang96@gmail.com**) if you have similar interests on above topics.
